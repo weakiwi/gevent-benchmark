@@ -10,7 +10,7 @@ $PYTHON -mperf timeit  -s'from gevent import getcurrent' 'getcurrent()'
 
 $PYTHON -mperf timeit  -s'from gevent import spawn; f = lambda : 5' 'spawn(f)'
 $PYTHON -mperf timeit  -s'from gevent import spawn; f = lambda : 5' 'spawn(f).join()'
-$PYTHON -mperf timeit  -s'from gevent import spawn, wait; from gevent.hub import xrange; f = lambda : 5' 'for _ in xrange(10000): spawn(f)' 'wait()'
+$PYTHON -mperf timeit  -s'from gevent import spawn, wait;  f = lambda : 5' 'for _ in xrange(10000): spawn(f)' 'wait()'
 $PYTHON -mperf timeit  -s'from gevent import spawn_raw; f = lambda : 5' 'spawn_raw(f)'
 
 

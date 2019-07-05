@@ -1,0 +1,6 @@
+greenlet==0.4.15
+perf==1.6.0
+zope.interface==4.6.0
+gevent==1.4.0
+eventlet==0.25.0
+zope==4.1.1

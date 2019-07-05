@@ -7,8 +7,6 @@ __pycache__/
 *.so
 
 # result data
-!result_standard.json
-*.json
 
 # Distribution / packaging
 .Python

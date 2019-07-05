@@ -65,8 +65,8 @@ def bench_gevent_udp(loops):
         conn.close()
 
 def _do_sendall(loops, send, recv):
-    for s in send, recv:
-        os.set_inheritable(s.fileno(), True)
+    #for s in send, recv:
+    #    os.set_inheritable(s.fileno(), True)
     pid = os.fork()
     if not pid:
         send.close()

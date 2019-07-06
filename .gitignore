@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 # result data
+compare_result
 
 # Distribution / packaging
 .Python

@@ -66,19 +66,19 @@ def main():
     runner = perf.Runner()
 
     for name, obj in (('gevent', glocal()),
-                      ('gevent sub', GLocalSub()),
+                      ('gevent_sub', GLocalSub()),
                       ('native', nlocal()),
-                      ('native sub', NativeSub())):
+                      ('native_sub', NativeSub())):
         _populate(obj)
 
         benchmarks.append(
-            runner.bench_time_func('getattr ' + name,
+            runner.bench_time_func('getattr_' + name,
                                    bench_getattr,
                                    obj,
                                    inner_loops=10))
 
         benchmarks.append(
-            runner.bench_time_func('setattr ' + name,
+            runner.bench_time_func('setattr_' + name,
                                    bench_setattr,
                                    obj,
                                    inner_loops=10))

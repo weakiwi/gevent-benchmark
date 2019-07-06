@@ -36,19 +36,19 @@ def bench_spawn_gevent(loops, close_fds=True):
 def main():
     runner = perf.Runner()
 
-    runner.bench_time_func('spawn native no close_fds',
+    runner.bench_time_func('spawn_native_no_close_fds',
                            bench_spawn_native,
                            False,
                            inner_loops=N)
-    runner.bench_time_func('spawn gevent no close_fds',
+    runner.bench_time_func('spawn_gevent_no_close_fds',
                            bench_spawn_gevent,
                            False,
                            inner_loops=N)
 
-    runner.bench_time_func('spawn native close_fds',
+    runner.bench_time_func('spawn_native_close_fds',
                            bench_spawn_native,
                            inner_loops=N)
-    runner.bench_time_func('spawn gevent close_fds',
+    runner.bench_time_func('spawn_gevent_close_fds',
                            bench_spawn_gevent,
                            inner_loops=N)
 

@@ -98,15 +98,15 @@ def main():
 
     runner = perf.Runner()
 
-    runner.bench_func('multiple wait ready',
+    runner.bench_func('multiple_wait_ready',
                       bench_wait_func_ready,
                       inner_loops=N)
 
-    runner.bench_func('wait ready',
+    runner.bench_func('wait_ready',
                       bench_wait_ready,
                       inner_loops=N)
 
-    runner.bench_func('cancel wait',
+    runner.bench_func('cancel_wait',
                       bench_cancel_wait,
                       inner_loops=N)
 

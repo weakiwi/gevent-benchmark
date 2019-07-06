@@ -36,10 +36,10 @@ def bench_eventlet(loops, arg):
 def main():
     runner = perf.Runner()
     for arg in (0, -1, 0.00001, 0.001):
-        runner.bench_time_func('gevent sleep(%s)' % (arg,),
+        runner.bench_time_func('gevent_sleep(%s)' % (arg,),
                                bench_gevent, arg,
                                inner_loops=N)
-        runner.bench_time_func('eventlet sleep(%s)' % (arg,),
+        runner.bench_time_func('eventlet_sleep(%s)' % (arg,),
                                bench_eventlet, arg,
                                inner_loops=N)
 

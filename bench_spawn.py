@@ -168,28 +168,28 @@ def main():
     names = sorted(set(names))
 
     for name in names:
-        runner.bench_time_func(name + ' spawn',
+        runner.bench_time_func(name + '_spawn',
                                spawn_time,
                                globals()['bench_' + name],
                                Options(False, False),
                                inner_loops=N)
 
         if name != 'none':
-            runner.bench_time_func(name + ' sleep',
+            runner.bench_time_func(name + '_sleep',
                                    sleep_time,
                                    globals()['bench_' + name],
                                    Options(True, False),
                                    inner_loops=N)
 
     if 'geventpool' in names:
-        runner.bench_time_func('geventpool join',
+        runner.bench_time_func('geventpool_join',
                                join_time,
                                bench_geventpool,
                                Options(True, True),
                                inner_loops=N)
 
     for name in names:
-        runner.bench_time_func(name + ' spawn kwarg',
+        runner.bench_time_func(name + '_spawn_kwarg',
                                spawn_time,
                                globals()['bench_' + name],
                                Options(False, False, foo=1, bar='hello'),

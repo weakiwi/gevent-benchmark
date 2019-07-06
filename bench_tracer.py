@@ -86,31 +86,31 @@ def main():
     runner = perf.Runner()
 
     runner.bench_time_func(
-        "no tracer",
+        "no_tracer",
         bench_no_trace,
         inner_loops=N
     )
 
     runner.bench_time_func(
-        "trivial tracer",
+        "trivial_tracer",
         bench_trivial_tracer,
         inner_loops=N
     )
 
     runner.bench_time_func(
-        "monitor tracer",
+        "monitor_tracer",
         bench_monitor_tracer,
         inner_loops=N
     )
 
     runner.bench_time_func(
-        "max switch tracer",
+        "max_switch_tracer",
         bench_max_switch_tracer,
         inner_loops=N
     )
 
     runner.bench_time_func(
-        "hub switch tracer",
+        "hub_switch_tracer",
         bench_hub_switch_tracer,
         inner_loops=N
     )

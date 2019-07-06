@@ -122,31 +122,31 @@ def main():
     runner = perf.Runner()
 
     runner.bench_time_func(
-        'gevent socketpair sendall greenlet',
+        'gevent_socketpair_sendall_greenlet',
         bench_gevent_greenlet_default_socketpair,
         inner_loops=N)
 
     runner.bench_time_func(
-        'native socketpair sendall thread',
+        'native_socketpair_sendall_thread',
         bench_native_thread_default_socketpair,
         inner_loops=N)
 
     runner.bench_time_func(
-        'gevent socketpair sendall fork',
+        'gevent_socketpair_sendall_fork',
         bench_gevent_forked_socketpair,
         inner_loops=N)
 
     runner.bench_time_func(
-        'native socketpair sendall fork',
+        'native_socketpair_sendall_fork',
         bench_native_forked_socketpair,
         inner_loops=N)
 
     runner.bench_time_func(
-        'native udp sendto',
+        'native_udp_sendto',
         bench_native_udp,
         inner_loops=N)
     runner.bench_time_func(
-        'gevent udp sendto',
+        'gevent_udp_sendto',
         bench_gevent_udp,
         inner_loops=N)
 

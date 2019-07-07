@@ -15,3 +15,5 @@ $PYTHON bench_spawn.py --quiet --append result_${idc}.json
 $PYTHON bench_subprocess.py --quiet --append result_${idc}.json
 $PYTHON bench_threadpool.py --quiet --append result_${idc}.json
 $PYTHON bench_tracer.py --quiet --append result_${idc}.json
+
+$PYTHON count_score.py

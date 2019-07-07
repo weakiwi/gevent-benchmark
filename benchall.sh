@@ -14,6 +14,7 @@ $PYTHON bench_socket.py --quiet --append result_${idc}.json
 $PYTHON bench_spawn.py --quiet --append result_${idc}.json
 $PYTHON bench_subprocess.py --quiet --append result_${idc}.json
 $PYTHON bench_threadpool.py --quiet --append result_${idc}.json
-$PYTHON bench_tracer.py --quiet --append result_${idc}.json
+
+$PYTHON -m perf compare_to result_standard.json result_${idc}.json > compare_result
 
 $PYTHON count_score.py
